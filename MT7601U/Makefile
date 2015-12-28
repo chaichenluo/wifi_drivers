@@ -196,8 +196,10 @@ CROSS_COMPILE = mips-wrs-linux-gnu-
 endif
 
 ifeq ($(PLATFORM),PC)
+# Linux 4.0
+LINUX_SRC = /usr/src/linux-source-4.0
 # Linux 2.6
-LINUX_SRC = /lib/modules/$(shell uname -r)/build
+#LINUX_SRC = /lib/modules/$(shell uname -r)/build
 # Linux 2.4 Change to your local setting
 #LINUX_SRC = /usr/src/linux-2.4
 LINUX_SRC_MODULE = /lib/modules/$(shell uname -r)/kernel/drivers/net/wireless/
